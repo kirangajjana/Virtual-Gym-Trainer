@@ -1,4 +1,4 @@
-# Virtual Gym Trainer
+#Virtual Gym Trainer
 
 This is a Streamlit application that acts as a virtual gym trainer. The app generates personalized workout routines and daily diet plans based on user-provided fitness goals, current fitness level, and dietary restrictions/preferences.
 
@@ -22,4 +22,4 @@ This is a Streamlit application that acts as a virtual gym trainer. The app gene
 
    ```bash
    git clone https://github.com/your-username/your-repo.git
-   cd your-repo
+   cd your-repo'

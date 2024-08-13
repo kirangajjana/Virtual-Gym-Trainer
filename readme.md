@@ -23,3 +23,4 @@ This is a Streamlit application that acts as a virtual gym trainer. The app gene
    ```bash
    git clone https://github.com/your-username/your-repo.git
    cd your-repo'
+# you can access Version-1 here - https://kirangajjana-virtual-gym-trainer-home-920rqk.streamlit.app/

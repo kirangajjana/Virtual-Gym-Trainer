@@ -1,12 +1,19 @@
+import os
 import streamlit as st
 from dotenv import load_dotenv
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.output_parsers import StrOutputParser
 
+load_dotenv()
+
 # Load API keys from Streamlit secrets
-gemini_api_key = st.secrets["gemini_key"]
-langchain_api_key = st.secrets["langchain_key"]
+# gemini_api_key = st.secrets["gemini_key"]
+# langchain_api_key = st.secrets["langchain_key"]
+
+gemini_api_key = os.getenv("GEMINI_API_KEY")
+langchain_api_key = os.getenv("LANGCHAIN_API_KEY")
+
 
 # Initialize the Gemini LLM with the API key
 llm = ChatGoogleGenerativeAI(

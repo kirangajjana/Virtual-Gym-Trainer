@@ -4,10 +4,14 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.output_parsers import StrOutputParser
 
-load_dotenv()
+# Load API keys from Streamlit secrets
+gemini_api_key = st.secrets["gemini_key"]
+langchain_api_key = st.secrets["langchain_key"]
 
+# Initialize the Gemini LLM with the API key
 llm = ChatGoogleGenerativeAI(
     model="gemini-1.5-pro",
+    api_key=gemini_api_key,
     temperature=0,
     max_tokens=None,
     timeout=None,
@@ -20,6 +24,7 @@ prompt = ChatPromptTemplate.from_messages(
         ("human", "User Details:\nFitness Goals: {fitness_goals}\nCurrent Fitness Level: {fitness_level}\nDietary Restrictions/Preferences: {dietary_restrictions}\n\nPlease provide a suitable workout routine and daily diet plan.")
     ]
 )
+
 with st.sidebar:
     st.write('Virtual Gym Trainer')
     st.image('images.jpg')
